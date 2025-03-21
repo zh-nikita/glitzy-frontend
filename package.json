@@ -5,10 +5,10 @@
   "proxy": "http://localhost:5000",
   "dependencies": {
     "cra-template": "1.2.0",
-    "i18next": "^24.2.3",
+    "i18next": "^21.9.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-i18next": "^15.4.1",
+    "react-i18next": "^11.18.6",
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
     "web-vitals": "^4.2.4"
