@@ -1,0 +1,168 @@
+/* src/components/HomePage.css */
+.home-container {
+  text-align: center;
+  padding: 50px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgb(0, 255, 234);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  position: relative; /* Ensures content stays above video */
+  overflow: hidden;
+}
+
+/* Background Video */
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Keeps video behind other elements */
+}
+
+/* Content Box */
+.content {
+  position: relative;
+  z-index: 1; /* Ensure text is above the video */
+  text-align: center;
+  transform: translateY(-50px); /* Moves text higher */
+}
+
+.home-container h1 {
+  font-size: 50px;
+  margin-bottom: 200px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #0ff; /* Initial Cyan Neon */
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px rgba(0, 255, 255, 0.8);
+  animation: neonPulse 2s infinite alternate, colorShift 4s infinite alternate;
+}
+
+/* Dynamic Glow Effect */
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px rgba(0, 255, 255, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff, 0 0 50px rgba(0, 255, 255, 1);
+  }
+  100% {
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px rgba(0, 255, 255, 0.8);
+  }
+}
+
+/* Smooth Color Shift Effect */
+@keyframes colorShift {
+  0% {
+    color: rgb(174, 255, 0); /* Cyan */
+  }
+  25% {
+    color: #ff0; /* Yellow */
+  }
+  50% {
+    color: #f0f; /* Magenta */
+  }
+  75% {
+    color: #0f0; /* Green */
+  }
+  100% {
+    color: rgb(183, 0, 255); /* Back to Cyan */
+  }
+}
+
+/* ✅ Floating Text Effect */
+.floating-text {
+  animation: floatText 3s ease-in-out infinite;
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ✅ Countdown Timer */
+.countdown-container {
+  margin-top: -150px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff8800;
+}
+
+/* ✅ Play Now Button */
+.play-button {
+  display: inline-block;
+  margin-top: -40px;
+  margin-bottom: 30px;
+  padding: 15px 30px;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(135deg, #ff00ff, #ffcc00);
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #ffcc00, 0 0 30px #ff8800;
+  transition: all 0.3s ease-in-out;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ffcc00, 0 0 50px #ff8800;
+}
+
+/* ✅ Particle Animation (Floating Coins) */
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+/* ✅ Floating Coins */
+.coin-particle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+  animation: floatCoin linear infinite;
+  top: calc(100% * var(--randomY)); /* Random Y position */
+  left: calc(100% * var(--randomX)); /* Random X position */
+}
+
+
+/* ✅ Coin Floating Animation */
+@keyframes floatCoin {
+  0% { transform: translateY(0px) scale(0.9) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; } /* Gradually appear */
+  100% { transform: translateY(-150vh) scale(1.2) rotate(360deg); opacity: 0; }
+}
+/* Random Positions for Coins */
+.coin-particle:nth-child(1) { left: 5%; animation-duration: 19s; animation-delay: 0s; }
+.coin-particle:nth-child(2) { left: 15%; animation-duration: 18s; animation-delay: 1s; }
+.coin-particle:nth-child(3) { left: 25%; animation-duration: 23s; animation-delay: 2s; }
+.coin-particle:nth-child(4) { left: 35%; animation-duration: 26s; animation-delay: 1s; }
+.coin-particle:nth-child(5) { left: 45%; animation-duration: 25s; animation-delay: 3s; }
+.coin-particle:nth-child(6) { left: 55%; animation-duration: 23s; animation-delay: 2s; }
+.coin-particle:nth-child(7) { left: 65%; animation-duration: 15s; animation-delay: 1s; }
+.coin-particle:nth-child(8) { left: 75%; animation-duration: 16s; animation-delay: 2s; }
+.coin-particle:nth-child(9) { left: 85%; animation-duration: 23s; animation-delay: 1s; }
+.coin-particle:nth-child(10) { left: 95%; animation-duration: 17s; animation-delay: 3s; }
+
+
+.description {
+  margin-top: -10px;
+}

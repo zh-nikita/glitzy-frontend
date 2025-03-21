@@ -1,0 +1,181 @@
+/* ✅ Responsive Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #000000, #0055ff);
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+.header * {
+  box-sizing: border-box;
+}
+
+/* ✅ Logo & Navigation */
+.header-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 32px;
+  margin-right: 20px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #1100ff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-right: 15px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+.nav a:hover {
+  color: #00ff99;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ✅ Ensure Buttons Fit on Mobile */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ✅ Withdraw Button Design Fix */
+.withdraw-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #ff4444, #d40000);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.withdraw-btn:hover {
+  background: linear-gradient(135deg, #ff6666, #ff0000);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.5);
+}
+
+/* ✅ Balance Display for Casino Theme */
+.balance {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: rgba(25, 25, 25, 0.55);
+  color: #00ff88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  height: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* ✅ Language Switcher */
+.language-switcher {
+  display: flex;
+  gap: 10px;
+}
+
+.language-switcher button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.language-switcher button:hover {
+  transform: scale(1.1);
+  color: #00ff99;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .header-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 5px 0;
+  }
+
+  .nav li {
+    margin: 6px 0;
+  }
+
+  .nav a {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .language-switcher {
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .deposit-btn,
+  .withdraw-btn,
+  .login-btn {
+    width: 80%;
+    max-width: 250px;
+    font-size: 16px;
+  }
+
+  .balance {
+    font-size: 14px;
+    min-width: unset;
+    padding: 6px 10px;
+  }
+}

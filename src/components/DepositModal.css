@@ -1,0 +1,62 @@
+/* src/components/DepositModal.css */
+.deposit-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.deposit-modal {
+  background: #000000;
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+}
+
+/* ✅ Close button */
+.modal-close {
+  position: absolute;
+  top: 2px;  /* Moves the button higher */
+  right: 13px;
+  background: transparent;
+  border: none;
+  font-size: 35px;  /* Slightly smaller for better alignment */
+  cursor: pointer;
+  color: #ff0000;
+  transition: color 0.3s ease-in-out;
+  line-height: 1;  /* Ensures proper centering */
+}
+
+.modal-close:hover {
+  color: #d80000;
+}
+
+/* ✅ Center login-required message */
+.login-required {
+  text-align: center;
+  padding: 15px;
+  position: relative;
+}
+
+/* ✅ Fix Text Color */
+.modal-message {
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(255, 255, 255); /* Changed from red to black */
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

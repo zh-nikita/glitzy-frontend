@@ -1,0 +1,208 @@
+/* ✅ Full-page overlay with better background blur */
+.withdraw-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px); /* ✅ Adds a slight blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ✅ Improved Modal Styling */
+.withdraw-modal {
+  background: #1c1f26;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+  width: 340px;
+  max-height: 450px;
+  overflow-y: auto; /* ✅ Allows scrolling only if needed */
+  overflow-x: hidden; /* ✅ Removes horizontal scrollbar */
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* ✅ Close Button Styling */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+/* ✅ Modal Title */
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* ✅ Explanation Text */
+.modal-description {
+  font-size: 14px;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+/* ✅ Telegram Link */
+.telegram-link {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.telegram-link:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Input Field */
+.withdraw-modal input {
+  width: 90%;
+  padding: 8px;
+  margin: 6px 0;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #2a2d37;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.withdraw-modal .form-group {
+  width: 100%;
+  text-align: left;
+}
+/* ✅ Submit Button */
+.withdraw-modal .submit-btn {
+  width: 95%;
+  padding: 10px;
+  background: linear-gradient(135deg, #ff4d4d, #d40000);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.withdraw-modal .submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 0, 0, 0.5);
+}
+
+/* ✅ Success/Error Messages */
+.modal-message {
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+}
+/* ✅ Ensure the number input doesn't show arrows */
+.withdraw-modal input::-webkit-outer-spin-button,
+.withdraw-modal input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.withdraw-modal input {
+  width: 75%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #2a2d37;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* ✅ Style for input + max button container */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ Style for MAX button */
+.max-btn {
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #00ff88, #008844);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.max-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 255, 136, 0.3);
+}
+/* Withdrawal Info Section */
+.withdraw-info {
+  text-align: left;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+/* Table Formatting */
+.withdraw-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.withdraw-table td {
+  padding: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.withdraw-table td:first-child {
+  width: 30px;
+  text-align: center;
+}
+
+/* Telegram Link Styling */
+.telegram-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.telegram-link:hover {
+  text-decoration: underline;
+}
+@media (max-width: 400px) {
+  .withdraw-modal {
+    width: 90%;
+    max-height: 90vh;
+  }
+  .withdraw-modal input {
+    width: 100%;
+  }
+}
+
